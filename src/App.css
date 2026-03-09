@@ -1,38 +1,129 @@
-.App {
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to right, #eef2f3, #d7e1ec);
+  margin: 0;
+}
+
+/* Container */
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+/* Title */
+
+h1 {
   text-align: center;
+  font-size: 36px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Card layout */
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+  margin-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/* Form */
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  gap: 10px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+/* Inputs */
+
+input {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  width: 180px;
+  transition: 0.2s;
+}
+
+input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0px 0px 4px rgba(0,123,255,0.4);
+}
+
+/* Buttons */
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Add button */
+
+form button {
+  background: #28a745;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+form button:hover {
+  background: #218838;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Excel button */
+
+.download-btn {
+  background: #6f42c1;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.download-btn:hover {
+  background: #59339d;
+}
+
+/* Table */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #007bff;
+  color: white;
+  padding: 12px;
+}
+
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+/* Hover row */
+
+tr:hover {
+  background: #f3f7ff;
+}
+
+/* Action buttons */
+
+.edit-btn {
+  background: #ffc107;
+  color: black;
+  margin-right: 5px;
+}
+
+.delete-btn {
+  background: #dc3545;
+  color: white;
 }
