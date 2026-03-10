@@ -73,36 +73,75 @@ function StudentForm({ addStudent, editStudent, updateStudent }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+  <form
+    onSubmit={handleSubmit}
+    style={{
+      display: "flex",
+      flexDirection: "column",
+      gap: "12px",
+      width: "100%"
+    }}
+  >
 
-      <input
-        name="name"
-        placeholder="Name (letters only)"
-        value={form.name}
-        onChange={handleChange}
-      />
+    <input
+      name="name"
+      placeholder="👤 Name"
+      value={form.name}
+      onChange={handleChange}
+      style={{
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ddd",
+        fontSize: "14px"
+      }}
+    />
 
-      <input
-        name="email"
-        placeholder="Email"
-        value={form.email}
-        onChange={handleChange}
-      />
+    <input
+      name="email"
+      placeholder="📧 Email"
+      value={form.email}
+      onChange={handleChange}
+      style={{
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ddd",
+        fontSize: "14px"
+      }}
+    />
 
-      <input
-  type="number"
-  name="age"
-  placeholder="Age"
-  value={form.age}
-  onChange={handleChange}
-/>
+    <input
+      type="number"
+      name="age"
+      placeholder="🎂 Age"
+      value={form.age}
+      onChange={handleChange}
+      style={{
+        padding: "12px",
+        borderRadius: "8px",
+        border: "1px solid #ddd",
+        fontSize: "14px"
+      }}
+    />
 
-      <button type="submit">
-        {editStudent ? "Update Student" : "Add Student"}
-      </button>
+    <button
+      type="submit"
+      style={{
+        padding: "12px",
+        borderRadius: "8px",
+        border: "none",
+        background: "linear-gradient(135deg, #4f46e5, #06b6d4)",
+        color: "white",
+        fontWeight: "bold",
+        fontSize: "14px",
+        cursor: "pointer",
+        transition: "0.3s"
+      }}
+    >
+      {editStudent ? "Update Student" : "Add Student"}
+    </button>
 
-    </form>
-  );
+  </form>
+);
 }
 
 export default StudentForm;
